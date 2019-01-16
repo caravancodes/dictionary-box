@@ -2,11 +2,10 @@ package com.frogobox.kamusapps.views.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.frogobox.kamusapps.R;
-import com.frogobox.kamusapps.models.Dictionary;
+import com.frogobox.kamusapps.models.dataclass.Dictionary;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -30,6 +29,5 @@ public class DetailActivity extends AppCompatActivity {
         mTextViewDesc.setText(desc);
 
     }
-
 
 }

@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.frogobox.kamusapps.R;
-import com.frogobox.kamusapps.models.Dictionary;
+import com.frogobox.kamusapps.models.dataclass.Dictionary;
 import com.frogobox.kamusapps.views.activities.DetailActivity;
 
 import java.util.ArrayList;
@@ -37,9 +37,13 @@ public class DictionaryListAdapter extends RecyclerView.Adapter<DictionaryListAd
     private Context mContext;
     private ArrayList<Dictionary> data;
 
-    public DictionaryListAdapter(Context mContext, ArrayList<Dictionary> data) {
+    public DictionaryListAdapter(Context mContext) {
         this.mContext = mContext;
-        this.data = data;
+    }
+
+    public void addItem(ArrayList<Dictionary> mData) {
+        this.data = mData;
+        notifyDataSetChanged();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

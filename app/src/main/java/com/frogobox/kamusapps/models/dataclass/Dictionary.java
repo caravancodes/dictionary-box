@@ -1,4 +1,4 @@
-package com.frogobox.kamusapps.models;
+package com.frogobox.kamusapps.models.dataclass;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -22,15 +22,24 @@ import android.os.Parcelable;
  */
 public class Dictionary implements Parcelable {
 
+    private int id;
     private String word;
     private String description;
+
+    public Dictionary() {
+    }
 
     public Dictionary(String word, String description) {
         this.word = word;
         this.description = description;
     }
 
-    public Dictionary() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getWord() {
@@ -57,16 +66,18 @@ public class Dictionary implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.id);
         dest.writeString(this.word);
         dest.writeString(this.description);
     }
 
     protected Dictionary(Parcel in) {
+        this.id = in.readInt();
         this.word = in.readString();
         this.description = in.readString();
     }
 
-    public static final Parcelable.Creator<Dictionary> CREATOR = new Parcelable.Creator<Dictionary>() {
+    public static final Creator<Dictionary> CREATOR = new Creator<Dictionary>() {
         @Override
         public Dictionary createFromParcel(Parcel source) {
             return new Dictionary(source);

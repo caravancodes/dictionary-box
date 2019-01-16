@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#D81B60</color>-->
 
+    <color name="colorPrimary">#005485</color>
+    <color name="colorPrimaryDark">#003957</color>
+    <color name="colorAccent">#D81B60</color>
 
     <color name="colorIndonesia">#D81B60</color>
     <color name="colorEnglish">#673AB7</color>
-
 
     <color name="colorTextWhite">#FFFFFF</color>
     <color name="colorTextBlack">#000000</color>
