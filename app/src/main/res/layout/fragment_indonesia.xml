@@ -19,7 +19,8 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recylerViewIndonesia"
-        android:layout_marginTop="@dimen/dimen_small"
+        android:paddingTop="@dimen/dimen_mediums"
+        android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".views.activities.MainActivity"

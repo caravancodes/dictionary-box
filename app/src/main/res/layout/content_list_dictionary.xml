@@ -25,7 +25,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/dimen_small">
+    android:layout_marginStart="@dimen/dimen_mediums"
+    android:layout_marginEnd="@dimen/dimen_mediums"
+    android:layout_marginBottom="@dimen/dimen_mediums">
 
     <LinearLayout
         android:layout_width="match_parent"

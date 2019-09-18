@@ -54,45 +54,6 @@ public class DictionaryHelper {
         dataBaseHelper.close();
     }
 
-    public ArrayList<Dictionary> getDataByWord(String TABLE_NAME, String word){
-        Cursor cursor = database.query(TABLE_NAME,null, DataEntry.COLUMN_WORD +" LIKE ?",new String[]{word},null,null,_ID + " ASC",null);
-        cursor.moveToFirst();
-        ArrayList<Dictionary> arrayList = new ArrayList<>();
-        Dictionary mDictionary;
-        if (cursor.getCount()>0) {
-            do {
-                mDictionary = new Dictionary();
-                mDictionary.setId(cursor.getInt(cursor.getColumnIndexOrThrow(_ID)));
-                mDictionary.setWord(cursor.getString(cursor.getColumnIndexOrThrow(DataEntry.COLUMN_WORD)));
-                mDictionary.setDescription(cursor.getString(cursor.getColumnIndexOrThrow(DataEntry.COLUMN_DESCRIPTION)));
-                arrayList.add(mDictionary);
-                cursor.moveToNext();
-
-            } while (!cursor.isAfterLast());
-        }
-        cursor.close();
-        return arrayList;
-    }
-
-    public ArrayList<Dictionary> getAllData(String TABLE_NAME){
-        Cursor cursor = database.query(TABLE_NAME,null,null,null,null,null,_ID+ " ASC",null);
-        cursor.moveToFirst();
-        ArrayList<Dictionary> arrayList = new ArrayList<>();
-        Dictionary mDictionary;
-        if (cursor.getCount()>0) {
-            do {
-                mDictionary = new Dictionary();
-                mDictionary.setId(cursor.getInt(cursor.getColumnIndexOrThrow(_ID)));
-                mDictionary.setWord(cursor.getString(cursor.getColumnIndexOrThrow(DataEntry.COLUMN_WORD)));
-                mDictionary.setDescription(cursor.getString(cursor.getColumnIndexOrThrow(DataEntry.COLUMN_DESCRIPTION)));
-                arrayList.add(mDictionary);
-                cursor.moveToNext();
-            } while (!cursor.isAfterLast());
-        }
-        cursor.close();
-        return arrayList;
-    }
-
     public long insert(String TABLE_NAME, Dictionary mDictionary){
         ContentValues initialValues =  new ContentValues();
         initialValues.put(DataEntry.COLUMN_WORD, mDictionary.getWord());
@@ -122,13 +83,50 @@ public class DictionaryHelper {
 
     }
 
+    public ArrayList<Dictionary> getDataByWord(String TABLE_NAME, String word){
+        Cursor cursor = database.query(TABLE_NAME,null, DataEntry.COLUMN_WORD +" LIKE ?",new String[]{word},null,null,_ID + " ASC",null);
+        cursor.moveToFirst();
+        ArrayList<Dictionary> arrayList = new ArrayList<>();
+        Dictionary mDictionary;
+        if (cursor.getCount()>0) {
+            do {
+                mDictionary = new Dictionary();
+                mDictionary.setId(cursor.getInt(cursor.getColumnIndexOrThrow(_ID)));
+                mDictionary.setWord(cursor.getString(cursor.getColumnIndexOrThrow(DataEntry.COLUMN_WORD)));
+                mDictionary.setDescription(cursor.getString(cursor.getColumnIndexOrThrow(DataEntry.COLUMN_DESCRIPTION)));
+                arrayList.add(mDictionary);
+                cursor.moveToNext();
+            } while (!cursor.isAfterLast());
+        }
+        cursor.close();
+        return arrayList;
+    }
+
+    public ArrayList<Dictionary> getAllData(String TABLE_NAME){
+        Cursor cursor = database.query(TABLE_NAME,null,null,null,null,null,_ID+ " ASC",null);
+        cursor.moveToFirst();
+        ArrayList<Dictionary> arrayList = new ArrayList<>();
+        Dictionary mDictionary;
+        if (cursor.getCount()>0) {
+            do {
+                mDictionary = new Dictionary();
+                mDictionary.setId(cursor.getInt(cursor.getColumnIndexOrThrow(_ID)));
+                mDictionary.setWord(cursor.getString(cursor.getColumnIndexOrThrow(DataEntry.COLUMN_WORD)));
+                mDictionary.setDescription(cursor.getString(cursor.getColumnIndexOrThrow(DataEntry.COLUMN_DESCRIPTION)));
+                arrayList.add(mDictionary);
+                cursor.moveToNext();
+            } while (!cursor.isAfterLast());
+        }
+        cursor.close();
+        return arrayList;
+    }
+
     public int update(String TABLE_NAME, Dictionary mDictionary){
         ContentValues args = new ContentValues();
         args.put(DataEntry.COLUMN_WORD, mDictionary.getWord());
         args.put(DataEntry.COLUMN_DESCRIPTION, mDictionary.getDescription());
         return database.update(TABLE_NAME, args, _ID + "= '" + mDictionary.getId() + "'", null);
     }
-
 
     public int delete(String TABLE_NAME, int id){
         return database.delete(TABLE_NAME, _ID + " = '"+id+"'", null);

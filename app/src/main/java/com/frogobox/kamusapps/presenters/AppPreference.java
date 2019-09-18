@@ -25,8 +25,8 @@ import com.frogobox.kamusapps.R;
  */
 public class AppPreference {
 
-    SharedPreferences prefs;
-    Context context;
+    private SharedPreferences prefs;
+    private Context context;
 
     public AppPreference(Context context) {
         prefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -37,7 +37,7 @@ public class AppPreference {
         SharedPreferences.Editor editor = prefs.edit();
         String key = context.getResources().getString(R.string.app_first_run);
         editor.putBoolean(key,input);
-        editor.commit();
+        editor.apply();
     }
     public Boolean getFirstRun(){
         String key = context.getResources().getString(R.string.app_first_run);

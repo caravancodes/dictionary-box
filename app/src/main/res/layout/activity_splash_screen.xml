@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/progress_bar"
         android:textColor="@color/colorTextWhite"
-        android:text="@string/dicoding"
+        android:text="@string/powered"
         android:textSize="12sp"/>
 
     <ProgressBar

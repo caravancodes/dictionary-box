@@ -56,7 +56,6 @@ public class EnglishFragment extends Fragment {
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         DividerItemDecoration divider = new DividerItemDecoration(getContext(), mLayoutManager.getOrientation());
         // -----------------------------------------------------------------------------------------
-        mRecyclerView.addItemDecoration(divider);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(adapter);
