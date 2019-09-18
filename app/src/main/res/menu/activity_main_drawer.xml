@@ -12,6 +12,11 @@
             android:id="@+id/nav_en_to_in"
             android:icon="@drawable/ic_text_fields"
             android:title="@string/nav_en_to_in" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about"
+            android:title="@string/about_menu" />
     </group>
 
 </menu>

@@ -2,8 +2,9 @@
     <string name="app_name">Dictionary Box</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Frogobox Kamus</string>
-    <string name="nav_header_subtitle">frogoboxdev@gmail.com</string>
+    <string name="nav_header_title">Dictionary Box</string>
+    <string name="frogobox_email">frogoboxdev@gmail.com</string>
+    <string name="nav_header_subtitle">@string/frogobox_email</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -20,9 +21,22 @@
 
     <string name="dummy">dummy</string>
     <string name="frogobox">FrogoBox Dev</string>
+    <string name="frogoboxinc">FrogoBox Inc</string>
     <string name="powered">Powered By Android Studio</string>
+
+    <string name="text_aboutus_nama_amir">Muh. Faisal Amir</string>
+    <string name="text_aboutus_nama_ican">M. Ikhsan Ramadhan</string>
+    <string name="text_aboutus_saran1">Ada Saran?</string>
+    <string name="text_aboutus_saran2">Kirim saran anda ke</string>
+    <string name="text_aboutus_email">faisalamircs@gmail.com</string>
+    <string name="text_aboutus_title_finpro">Apa itu Finpro ?</string>
+    <string name="text_aboutus_descrition_finpro">Finpro adalah aplikasi manajemen proyek akhir milik prodi D3 Rekayasa Perangkat Lunak Aplikasi Universitas Telkom, Finpro berguna untuk memonitoring bimbingan mahasiswa, hasil pengerjaan proyek mahasiswa.</string>
+    <string name="text_aboutus_link_website">d3if-finpro.org</string>
+    <string name="text_aboutus_copyright">Copyright 2019</string>
+    <string name="text_aboutus_allright">all rights reserved</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_first_run">app_first_run</string>
+    <string name="about_menu">About Us</string>
 </resources>

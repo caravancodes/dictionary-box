@@ -14,15 +14,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.frogobox.kamusapps.R;
+import com.frogobox.kamusapps.views.fragments.AboutUsFragment;
 import com.frogobox.kamusapps.views.fragments.EnglishFragment;
 import com.frogobox.kamusapps.views.fragments.IndonesiaFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    private IndonesiaFragment mIndonesiaFragment = new IndonesiaFragment();
-    private EnglishFragment mEnglishFragment = new EnglishFragment();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,9 +77,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_in_to_en) {
-            setFragmentLayout(mIndonesiaFragment);
+            setFragmentLayout(new IndonesiaFragment());
         } else if (id == R.id.nav_en_to_in) {
-            setFragmentLayout(mEnglishFragment);
+            setFragmentLayout(new EnglishFragment());
+        } else if (id == R.id.nav_about) {
+            setFragmentLayout(new AboutUsFragment());
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
