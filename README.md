@@ -5,7 +5,7 @@ Aplikasi Kamus Bahasa Inggris - Indo, Indo - Inggris
 
 | UI 1 | UI 2 | UI 3 |
 |:----:|:----:|:----:|
-|<span align="center"><img width="200px" height="360px" src="docs/image/main_1.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/main_2.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/main_3.png"></span> |
+|<span align="center"><img width="200px" height="360px" src="docs/image/ss_1.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_2.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_3.png"></span> |
 
 
 ## Version Release
