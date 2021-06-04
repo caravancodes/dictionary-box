@@ -17,7 +17,7 @@
         android:textColor="@color/colorTextWhite"
         android:background="@color/colorIndonesia"/>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recylerViewIndonesia"
         android:paddingTop="@dimen/dimen_mediums"
         android:clipToPadding="false"
